@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: Booking Service API
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/booking_db_v2
+    username: postgres
+    password: booking_password
+    driverClassName: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/db.changelog.yaml

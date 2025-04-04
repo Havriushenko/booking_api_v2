@@ -1,0 +1,19 @@
+databaseChangeLog:
+
+  - include:
+      file: db/sql/2025-03-27-1400_create_unit_type.sql
+
+  - include:
+      file: db/sql/2025-03-27-1403_create_unit.sql
+
+  - include:
+      file: db/sql/2025-03-27-1404_create_booking_status.sql
+
+  - include:
+      file: db/sql/2025-03-27-1405_create_booking.sql
+
+  - include:
+      file: db/sql/2025-03-27-1420_insert_units.sql
+
+  - include:
+      file: db/sql/2025-03-27-1425_insert_booking.sql
