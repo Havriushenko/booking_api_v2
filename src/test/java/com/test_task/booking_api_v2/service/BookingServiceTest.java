@@ -31,7 +31,7 @@ class BookingServiceTest {
   @Test
   void when_getBookingByUserId_expect_successfulFind() {
     Pageable pageable = PageRequest.of(0, 10);
-    assertThat(this.bookingService.findAllByUser(5L, pageable))
+    assertThat(this.bookingService.findAllByUser(25L, pageable))
         .isNotNull()
         .isNotEmpty()
         .hasSize(2);

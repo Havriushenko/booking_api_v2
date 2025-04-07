@@ -5,3 +5,4 @@ INSERT INTO public.booking (booking_status, check_in, check_out, create_at, unit
 INSERT INTO public.booking (booking_status, check_in, check_out, create_at, unit_, user_ ) VALUES('PENDING', '2025-04-16T21:19:51', '2025-05-25T21:19:51', '2025-04-01T21:19:51', 6, 55);
 INSERT INTO public.booking (booking_status, check_in, check_out, create_at, unit_, user_ ) VALUES('PENDING', '2025-07-16T21:19:51', '2025-05-25T21:19:51', '2025-04-01T21:19:51', 2, 5);
 INSERT INTO public.booking (booking_status, check_in, check_out, create_at, unit_, user_ ) VALUES('PENDING', '2025-07-16T21:19:51', '2025-05-25T21:19:51', '2025-04-01T21:19:51', 2, 25);
+INSERT INTO public.booking (booking_status, check_in, check_out, create_at, unit_, user_ ) VALUES('PENDING', '2026-07-16T21:19:51', '2026-05-25T21:19:51', '2025-04-01T21:19:51', 11, 25);
