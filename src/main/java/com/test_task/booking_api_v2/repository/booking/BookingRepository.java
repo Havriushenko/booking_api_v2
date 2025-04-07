@@ -20,5 +20,6 @@ public interface BookingRepository extends JpaRepository<BookingEntity, Long> {
       AND (b.check_in < :checkOut AND b.check_out > :checkIn);""", nativeQuery = true)
   Optional<BookingEntity> findExistingBooking(Long unitId, BookingStatus status, Instant checkIn, Instant checkOut);
 
+  @Query(value = "SELECT * FROM Booking b WHERE b.user_ = :userId;", nativeQuery = true)
   Page<BookingEntity> findAllByUserId(Long userId, Pageable pageable);
 }

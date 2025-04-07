@@ -34,47 +34,47 @@ class BookingTest {
 
   @Test
   void getBookingByUserId_200() throws Exception {
-    this.mockMvc.perform(get("/booking/users/25"))
+    this.mockMvc.perform(get("/booking/users?userId=25"))
         .andExpect(status().isOk())
         .andExpect(MockMvcResultMatchers.content().json(
             """
                 {
-                  "content": [
-                    {
-                      "id": 7,
-                      "unitId": 2,
-                      "status": "PENDING",
-                      "checkIn": "2026-07-16T18:19:51Z",
-                      "checkOut": "2026-07-20T18:19:51Z",
-                      "createAt": "2025-04-01T21:19:51Z"
-                    }
-                  ],
-                  "pageable": {
-                    "pageNumber": 0,
-                    "pageSize": 10,
-                    "sort": {
-                      "empty": true,
-                      "unsorted": true,
-                      "sorted": false
-                    },
-                    "offset": 0,
-                    "unpaged": false,
-                    "paged": true
-                  },
-                  "last": true,
-                  "totalPages": 1,
-                  "totalElements": 1,
-                  "first": true,
-                  "size": 10,
-                  "number": 0,
-                  "sort": {
-                    "empty": true,
-                    "unsorted": true,
-                    "sorted": false
-                  },
-                  "numberOfElements": 1,
-                  "empty": false
-                }
+                   "content": [
+                     {
+                       "id": 7,
+                       "unitId": 2,
+                       "status": "PENDING",
+                       "checkIn": "2025-07-16T21:19:51Z",
+                       "checkOut": "2025-05-25T21:19:51Z",
+                       "createAt": "2025-04-01T21:19:51Z"
+                     }
+                   ],
+                   "pageable": {
+                     "pageNumber": 0,
+                     "pageSize": 10,
+                     "sort": {
+                       "empty": true,
+                       "sorted": false,
+                       "unsorted": true
+                     },
+                     "offset": 0,
+                     "paged": true,
+                     "unpaged": false
+                   },
+                   "last": true,
+                   "totalElements": 1,
+                   "totalPages": 1,
+                   "first": true,
+                   "size": 10,
+                   "number": 0,
+                   "sort": {
+                     "empty": true,
+                     "sorted": false,
+                     "unsorted": true
+                   },
+                   "numberOfElements": 1,
+                   "empty": false
+                 }
                 """
         ));
   }

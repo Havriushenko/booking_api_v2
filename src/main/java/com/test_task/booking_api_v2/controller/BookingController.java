@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -48,11 +49,11 @@ public class BookingController {
     return ResponseEntity.ok(response);
   }
 
-  @GetMapping("/users/{userId}")
+  @GetMapping("/users")
   @Cacheable(value = "bookingByUserId", key = "#userId")
   @Operation(summary = "Endpoint for get all booking by user id.")
   public ResponseEntity<Page<BookingResponseDto>> findAllByUserId(
-      @PathVariable(value = "userId") Long userId,
+      @RequestParam Long userId,
       @PageableDefault Pageable pageable
   ) {
     Page<BookingResponseDto> response = this.bookingService.findAllByUser(userId, pageable);
